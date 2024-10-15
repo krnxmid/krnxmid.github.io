@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karanveer Singh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <h1>Welcome to Karan's GitHub Pages Website!</h1>
-  <p>This website is in construction! check any other time :)</p>
+    <header>
+        <div class="container">
+            <h1>Karanveer Singh</h1>
+            <p>Student | Aspiring Programmer</p>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Karanveer Singh, a student learning programming. I enjoy exploring new technologies and building cool projects.</p>
+        </section>
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Modbus data over Website <i class="fas fa-code"></i></h3>
+                <p>Displaying modbus data on a website using python and fastapi. this project include EC2 and a G1 mini computer to accomplish this task. the G1 mini computer sends the modbus data in the form of POST requests and the EC2 handles the requests and displays it in a tabular form. This dashboard has the functionality of downloading the data as an excel file and also supports databasa meaning the data will be stored and can be accessed anytime.</p>
+            </div>
+            <div class="project">
+                <h3>Wifi deauther using ESP32<i class="fas fa-laptop-code"></i></h3>
+                <p>I've created many esp-32 deauthers in the past and they are very fun! its pretty easy to do so, you can get the full documentation of deauther.com and all you need is an esp32 and a usb micro cable for flashing, and thats it! now you can access the deauther web interface on a local host and select the wifi to attack.</p>
+            </div>
+            <div class="project">
+                <h3>ESP32 CAM<i class="fas fa-cogs"></i></h3>
+                <p>if you are like me you will probably like arduino, esp32 and other iot stuff. they are so fun to learn, especially the esp32s, another type of esp32 is the esp32 camera. its a camera with an integrated cpu meaning it can compute while streaming, meaning it opens up a world of oppurtunities like color, object tracking, surviellance, iot applications etc.</p>
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="kforkaranveer@gmail.com">kforkaranveer@gmail.com</a> <i class="fas fa-envelope"></i></p>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; 2024 Karanveer Singh</p>
+    </footer>
 </body>
 </html>
