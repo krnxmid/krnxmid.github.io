@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karanveer Singh's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -12,6 +13,13 @@
         <div class="container">
             <h1>Karanveer Singh</h1>
             <p>Student | Aspiring Programmer</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -22,25 +30,35 @@
         <section id="projects" class="container">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Modbus data over Website <i class="fas fa-code"></i></h3>
-                <p>Displaying modbus data on a website using python and fastapi. this project include EC2 and a G1 mini computer to accomplish this task. the G1 mini computer sends the modbus data in the form of POST requests and the EC2 handles the requests and displays it in a tabular form. This dashboard has the functionality of downloading the data as an excel file and also supports databasa meaning the data will be stored and can be accessed anytime.</p>
+                <img src="modbus_project_image.jpg" alt="Modbus Project">
+                <h3>Modbus Data over Website <i class="fas fa-code"></i></h3>
+                <p>Displaying modbus data on a website using Python and FastAPI. This project includes EC2 and a G1 mini computer to accomplish this task. The G1 mini computer sends the modbus data in POST requests, and EC2 handles the requests and displays them in a tabular form. This dashboard supports downloading data as an Excel file and a database to store and access data anytime.</p>
             </div>
             <div class="project">
-                <h3>Wifi deauther using ESP32<i class="fas fa-laptop-code"></i></h3>
-                <p>I've created many esp-32 deauthers in the past and they are very fun! its pretty easy to do so, you can get the full documentation of deauther.com and all you need is an esp32 and a usb micro cable for flashing, and thats it! now you can access the deauther web interface on a local host and select the wifi to attack.</p>
+                <img src="wifi_deauther_project_image.jpg" alt="Wifi Deauther Project">
+                <h3>Wifi Deauther using ESP32 <i class="fas fa-laptop-code"></i></h3>
+                <p>I've created many ESP-32 deauthers. It's a fun project! You can follow full documentation on deauther.com, flash the ESP32, and access the deauther interface on a local host.</p>
             </div>
             <div class="project">
-                <h3>ESP32 CAM<i class="fas fa-cogs"></i></h3>
-                <p>if you are like me you will probably like arduino, esp32 and other iot stuff. they are so fun to learn, especially the esp32s, another type of esp32 is the esp32 camera. its a camera with an integrated cpu meaning it can compute while streaming, meaning it opens up a world of oppurtunities like color, object tracking, surviellance, iot applications etc.</p>
+                <img src="esp32_cam_project_image.jpg" alt="ESP32 CAM Project">
+                <h3>ESP32 CAM <i class="fas fa-cogs"></i></h3>
+                <p>If you enjoy IoT projects, the ESP32 CAM is a must-try. It's a camera with an integrated CPU, enabling color tracking, object tracking, surveillance, and more.</p>
             </div>
         </section>
         <section id="contact" class="container">
             <h2>Contact</h2>
-            <p>Email: <a href="kforkaranveer@gmail.com">kforkaranveer@gmail.com</a> <i class="fas fa-envelope"></i></p>
+            <p>Email: <a href="mailto:kforkaranveer@gmail.com">kforkaranveer@gmail.com</a> <i class="fas fa-envelope"></i></p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/karanveersingh" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/krnxmid" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </section>
+        <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
     </main>
     <footer class="container">
         <p>&copy; 2024 Karanveer Singh</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
