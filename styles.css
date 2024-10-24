@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 h1, h2, h3 {
@@ -21,12 +22,16 @@ a {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s forwards;
 }
 
 header {
     background-color: #363636;
     padding: 20px;
     text-align: center;
+    animation: slide-down 1.5s ease-out;
 }
 
 header nav ul {
@@ -42,6 +47,11 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
 }
 
 h2 {
@@ -49,6 +59,7 @@ h2 {
     font-size: 2em;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
+    transition: border-color 0.3s;
 }
 
 .project {
@@ -57,18 +68,19 @@ h2 {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+    animation: fade-up 0.8s ease-in-out;
 }
 
 .project img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .social-icons {
@@ -79,6 +91,12 @@ h2 {
     margin-right: 15px;
     font-size: 1.5em;
     color: #00bcd4;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.2);
 }
 
 #back-to-top {
@@ -92,6 +110,14 @@ h2 {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s;
+}
+
+#back-to-top:hover {
+    background-color: #fff;
+    color: #00bcd4;
+    transition: all 0.3s;
 }
 
 footer {
@@ -99,4 +125,43 @@ footer {
     padding: 20px;
     text-align: center;
     color: #fff;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
