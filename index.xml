@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Karan&#39;s DevLog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://krnxmid.github.io/</link>
     <description>Recent content on Karan&#39;s DevLog</description>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://krnxmid.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello another page</title>
-      <link>http://localhost:1313/posts/hello-another-page/</link>
+      <link>https://krnxmid.github.io/posts/hello-another-page/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-another-page/</guid>
+      <guid>https://krnxmid.github.io/posts/hello-another-page/</guid>
       <description>&lt;p&gt;Hello this is another page&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Insane Blog Pipeline</title>
-      <link>http://localhost:1313/posts/my-insane-blog-pipeline/</link>
+      <link>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-insane-blog-pipeline/</guid>
+      <guid>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</guid>
       <description>&lt;p&gt;Yay this is working&lt;/p&gt;</description>
     </item>
     <item>
       <title>yay second page</title>
-      <link>http://localhost:1313/posts/yay-second-page/</link>
+      <link>https://krnxmid.github.io/posts/yay-second-page/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/yay-second-page/</guid>
+      <guid>https://krnxmid.github.io/posts/yay-second-page/</guid>
       <description>&lt;p&gt;Hello i am karan&lt;/p&gt;</description>
     </item>
   </channel>
