@@ -10,76 +10,31 @@
     <atom:link href="https://krnxmid.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello another page</title>
-      <link>https://krnxmid.github.io/posts/posts/hello-another-page/</link>
+      <link>https://krnxmid.github.io/posts/hello-another-page/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/posts/hello-another-page/</guid>
+      <guid>https://krnxmid.github.io/posts/hello-another-page/</guid>
       <description>&lt;p&gt;Hello this is another page&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Insane Blog Pipeline</title>
-      <link>https://krnxmid.github.io/posts/posts/my-insane-blog-pipeline/</link>
+      <link>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/posts/my-insane-blog-pipeline/</guid>
+      <guid>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</guid>
       <description>&lt;p&gt;Yay this is working&lt;/p&gt;</description>
     </item>
     <item>
       <title>Welcome to My Blog Page 👾🎉</title>
-      <link>https://krnxmid.github.io/posts/posts/welcome-to-my-blog-page-/</link>
+      <link>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/posts/welcome-to-my-blog-page-/</guid>
+      <guid>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</guid>
       <description>&lt;p&gt;I Spent a lot of time on this and this is finally working ayayayayayayayyayayayy&lt;/p&gt;</description>
     </item>
     <item>
       <title>yay second page</title>
-      <link>https://krnxmid.github.io/posts/posts/yay-second-page/</link>
+      <link>https://krnxmid.github.io/posts/yay-second-page/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/posts/yay-second-page/</guid>
+      <guid>https://krnxmid.github.io/posts/yay-second-page/</guid>
       <description>&lt;p&gt;Hello i am karan&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://krnxmid.github.io/posts/excalidraw/drawing-2025-02-16-14.03.37.excalidraw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/excalidraw/drawing-2025-02-16-14.03.37.excalidraw/</guid>
-      <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;
-&lt;h2 id=&#34;drawing&#34;&gt;Drawing&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-compressed-json&#34; data-lang=&#34;compressed-json&#34;&gt;N4IgLgngDgpiBcIYA8DGBDANgSwCYCd0B3EAGhADcZ8BnbAewDsEAmcm+gV31TkQAswYKDXgB6MQHNsYfpwBGAOlT0AtmIBeNCtlQbs6RmPry6uA4wC0KDDgLFLUTJ2lH8MTDHQ0YNMWHRJMRZFAA5FAGYyJE9VGEYwGgQAbQBdcnQoKABlALA+UEl8PGzsDT5GTkxMch0YIgAhdFQAayKuRlwAYXpMenwEEABiADMx8ZAAX0mgA
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://krnxmid.github.io/posts/my-board/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/my-board/</guid>
-      <description>&lt;h2 id=&#34;things-to-try&#34;&gt;🚀Things to Try&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; HUGO Blog site&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Wifi dos script&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;done&#34;&gt;🎊Done&lt;/h2&gt;
-&lt;h2 id=&#34;urgent&#34;&gt;🚨Urgent&lt;/h2&gt;
-&lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;board&amp;#34;,&amp;#34;list-collapse&amp;#34;:[false,false,false]}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://krnxmid.github.io/posts/python-scripts/wifi_dos_script/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/python-scripts/wifi_dos_script/</guid>
-      <description>&lt;h2 id=&#34;todo&#34;&gt;todo&lt;/h2&gt;
-&lt;h2 id=&#34;completed&#34;&gt;completed&lt;/h2&gt;
-&lt;h2 id=&#34;tasked&#34;&gt;tasked&lt;/h2&gt;
-&lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;board&amp;#34;,&amp;#34;list-collapse&amp;#34;:[false,false,false]}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>&lt;% tp.file.title %&gt;</title>
-      <link>https://krnxmid.github.io/posts/templates/title/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/templates/title/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
