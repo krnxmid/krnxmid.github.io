@@ -2,22 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://krnxmid.github.io/posts/hello-another-page/</loc>
+    <loc>https://krnxmid.github.io/posts/posts/hello-another-page/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://krnxmid.github.io/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</loc>
+    <loc>https://krnxmid.github.io/posts/posts/my-insane-blog-pipeline/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://krnxmid.github.io/posts/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://krnxmid.github.io/posts/yay-second-page/</loc>
+    <loc>https://krnxmid.github.io/posts/posts/welcome-to-my-blog-page-/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://krnxmid.github.io/posts/posts/yay-second-page/</loc>
+    <lastmod>2025-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://krnxmid.github.io/posts/excalidraw/drawing-2025-02-16-14.03.37.excalidraw/</loc>
+  </url><url>
+    <loc>https://krnxmid.github.io/posts/my-board/</loc>
+  </url><url>
+    <loc>https://krnxmid.github.io/posts/python-scripts/wifi_dos_script/</loc>
+  </url><url>
+    <loc>https://krnxmid.github.io/posts/templates/title/</loc>
+  </url><url>
     <loc>https://krnxmid.github.io/categories/</loc>
+  </url><url>
+    <loc>https://krnxmid.github.io/tags/excalidraw/</loc>
   </url><url>
     <loc>https://krnxmid.github.io/tags/</loc>
   </url>
