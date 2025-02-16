@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://krnxmid.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Welcome to My Blog Page 👾🎉</title>
+      <link>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</guid>
+      <description>&lt;p&gt;I Spent a lot of time on this and this is finally working ayayayayayayayyayayayy&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Hello another page</title>
       <link>https://krnxmid.github.io/posts/hello-another-page/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
@@ -21,13 +28,6 @@
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</guid>
       <description>&lt;p&gt;Yay this is working&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to My Blog Page 👾🎉</title>
-      <link>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/welcome-to-my-blog-page-/</guid>
-      <description>&lt;p&gt;I Spent a lot of time on this and this is finally working ayayayayayayayyayayayy&lt;/p&gt;</description>
     </item>
     <item>
       <title>yay second page</title>
