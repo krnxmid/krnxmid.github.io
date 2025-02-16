@@ -18,32 +18,11 @@
 &lt;p&gt;Ever since I first tinkered with computers, I&amp;rsquo;ve been captivated by how technology works—from building systems from scratch to understanding the intricate details of digital security. My passion for cybersecurity has driven me to explore ethical hacking and system administration, and now I want to bring you along on that journey.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hello another page</title>
-      <link>https://krnxmid.github.io/posts/hello-another-page/</link>
+      <title>My Hugo experience 💀</title>
+      <link>https://krnxmid.github.io/posts/my-hugo-experience-/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/hello-another-page/</guid>
-      <description>&lt;p&gt;Hello this is another page&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>hello didi</title>
-      <link>https://krnxmid.github.io/posts/hello-didi/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/hello-didi/</guid>
-      <description>&lt;p&gt;hello fjfhjljkjkhjchgh&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Insane Blog Pipeline</title>
-      <link>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/my-insane-blog-pipeline/</guid>
-      <description>&lt;p&gt;Yay this is working&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>yay second page</title>
-      <link>https://krnxmid.github.io/posts/yay-second-page/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/yay-second-page/</guid>
-      <description>&lt;p&gt;Hello i am karan&lt;/p&gt;</description>
+      <guid>https://krnxmid.github.io/posts/my-hugo-experience-/</guid>
+      <description>&lt;p&gt;i just spent my whole sunday on getting this working and i am tired now because most of the tutorials i had followed were for macos or were just outdated. the biggest issue with deploying to github pages is that github pages looks for stylesheet links in a html file the different way and hugo was not doing that, so i had to look for a solutions for hours and now i finally have it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
