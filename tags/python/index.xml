@@ -13,8 +13,7 @@
       <link>https://krnxmid.github.io/posts/iot-project/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://krnxmid.github.io/posts/iot-project/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;c:\\Users\\karan\\Desktop\\WORKSPACE\\HUGO-SITES\\blog-files\\karan-blog\\static\\images\\Pasted%20image%2020250217203002.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This project integrates a Programmable Logic Controller (PLC) with ThingsBoard, an open-source IoT platform, to monitor and control industrial processes. The project leverages Python for automation, the ThingsBoard Rule Engine for real-time data processing, and a combination of sensors and actuators for industrial applications.&lt;/p&gt;
 &lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
 &lt;ul&gt;

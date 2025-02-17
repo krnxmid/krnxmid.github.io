@@ -18,12 +18,31 @@
 &lt;p&gt;Ever since I first tinkered with computers, I&amp;rsquo;ve been captivated by how technology works—from building systems from scratch to understanding the intricate details of digital security. My passion for cybersecurity has driven me to explore ethical hacking and system administration, and now I want to bring you along on that journey.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Aircrack-NG Guide</title>
+      <link>https://krnxmid.github.io/posts/aircrack-ng-suite-setup-and-usage-guide/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://krnxmid.github.io/posts/aircrack-ng-suite-setup-and-usage-guide/</guid>
+      <description>&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;%5Cstatic%5Cimages%5CPasted%20image%2020250217203427.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;on-kali-linux-pre-installed&#34;&gt;On Kali Linux (Pre-installed)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install aircrack-ng
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-ubuntudebian&#34;&gt;On Ubuntu/Debian&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install aircrack-ng
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-arch-linux&#34;&gt;On Arch Linux&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S aircrack-ng
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-macos-using-homebrew&#34;&gt;On macOS (Using Homebrew)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install aircrack-ng
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enabling-monitor-mode&#34;&gt;Enabling Monitor Mode&lt;/h2&gt;
+&lt;p&gt;Before performing any attacks, you need to put your wireless interface in monitor mode.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>IoT Project</title>
       <link>https://krnxmid.github.io/posts/iot-project/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://krnxmid.github.io/posts/iot-project/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;c:\\Users\\karan\\Desktop\\WORKSPACE\\HUGO-SITES\\blog-files\\karan-blog\\static\\images\\Pasted%20image%2020250217203002.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This project integrates a Programmable Logic Controller (PLC) with ThingsBoard, an open-source IoT platform, to monitor and control industrial processes. The project leverages Python for automation, the ThingsBoard Rule Engine for real-time data processing, and a combination of sensors and actuators for industrial applications.&lt;/p&gt;
 &lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
 &lt;ul&gt;
