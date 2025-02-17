@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Aircrack-NG Guide | Karan&#39;s DevLog</title>
 <meta name="keywords" content="">
-<meta name="description" content="!
+<meta name="description" content="
 Introduction
 Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.
 Installation
@@ -71,7 +71,7 @@ Before performing any attacks, you need to put your wireless interface in monito
 </noscript><meta property="og:url" content="https://krnxmid.github.io/posts/aircrack-ng-suite-setup-and-usage-guide/">
   <meta property="og:site_name" content="Karan&#39;s DevLog">
   <meta property="og:title" content="Aircrack-NG Guide">
-  <meta property="og:description" content="!
+  <meta property="og:description" content="
 Introduction Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.
 Installation On Kali Linux (Pre-installed) sudo apt update &amp;&amp; sudo apt install aircrack-ng On Ubuntu/Debian sudo apt update &amp;&amp; sudo apt install aircrack-ng On Arch Linux sudo pacman -S aircrack-ng On macOS (Using Homebrew) brew install aircrack-ng Enabling Monitor Mode Before performing any attacks, you need to put your wireless interface in monitor mode.">
   <meta property="og:locale" content="en-us">
@@ -81,7 +81,7 @@ Installation On Kali Linux (Pre-installed) sudo apt update &amp;&amp; sudo apt i
     <meta property="article:modified_time" content="2025-02-17T00:00:00+00:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Aircrack-NG Guide">
-<meta name="twitter:description" content="!
+<meta name="twitter:description" content="
 Introduction
 Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.
 Installation
@@ -123,12 +123,12 @@ Before performing any attacks, you need to put your wireless interface in monito
   "@type": "BlogPosting",
   "headline": "Aircrack-NG Guide",
   "name": "Aircrack-NG Guide",
-  "description": "!\nIntroduction Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.\nInstallation On Kali Linux (Pre-installed) sudo apt update \u0026amp;\u0026amp; sudo apt install aircrack-ng On Ubuntu/Debian sudo apt update \u0026amp;\u0026amp; sudo apt install aircrack-ng On Arch Linux sudo pacman -S aircrack-ng On macOS (Using Homebrew) brew install aircrack-ng Enabling Monitor Mode Before performing any attacks, you need to put your wireless interface in monitor mode.\n",
+  "description": "\nIntroduction Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.\nInstallation On Kali Linux (Pre-installed) sudo apt update \u0026amp;\u0026amp; sudo apt install aircrack-ng On Ubuntu/Debian sudo apt update \u0026amp;\u0026amp; sudo apt install aircrack-ng On Arch Linux sudo pacman -S aircrack-ng On macOS (Using Homebrew) brew install aircrack-ng Enabling Monitor Mode Before performing any attacks, you need to put your wireless interface in monitor mode.\n",
   "keywords": [
     
   ],
-  "articleBody": "!\nIntroduction Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.\nInstallation On Kali Linux (Pre-installed) sudo apt update \u0026\u0026 sudo apt install aircrack-ng On Ubuntu/Debian sudo apt update \u0026\u0026 sudo apt install aircrack-ng On Arch Linux sudo pacman -S aircrack-ng On macOS (Using Homebrew) brew install aircrack-ng Enabling Monitor Mode Before performing any attacks, you need to put your wireless interface in monitor mode.\nIdentify Wireless Interface ip a OR\niwconfig Enable Monitor Mode sudo airmon-ng start wlan0 This will create a new interface, usually named wlan0mon.\nDisable Monitor Mode sudo airmon-ng stop wlan0mon Common Attacks with Aircrack-ng 1. Packet Capture (airodump-ng) sudo airodump-ng wlan0mon This command scans for nearby networks and displays information like BSSID, ESSID, and encryption type.\nCapture Handshake for WPA/WPA2 Cracking sudo airodump-ng -c --bssid -w capture wlan0mon Replace with the Wi-Fi channel and with the target AP’s BSSID.\n2. Deauthentication Attack (aireplay-ng) Deauth attacks disconnect clients from the AP, forcing them to reconnect and potentially capture handshakes.\nsudo aireplay-ng -0 10 -a -c wlan0mon -0 10: Sends 10 deauth packets -a : Target AP’s MAC address -c : Specific client (optional, if omitted, all clients will be targeted) 3. WPA/WPA2 Password Cracking (aircrack-ng) Once the handshake is captured, use a wordlist to crack it:\nsudo aircrack-ng -w -b capture.cap Replace with a password list file (e.g., rockyou.txt).\n4. WEP Cracking Collect IVs sudo airodump-ng --bssid -c -w wep_capture wlan0mon Crack WEP Key sudo aircrack-ng -b wep_capture.cap 5. Fake Authentication Attack For bypassing MAC filtering and associating with a WEP network:\nsudo aireplay-ng -1 0 -a -h wlan0mon Additional Aircrack-ng Tools airmon-ng - Puts Wi-Fi adapters into monitor mode. airodump-ng - Captures packets and displays networks. aireplay-ng - Injects packets for various attacks. aircrack-ng - Cracks WEP/WPA passwords. packetforge-ng - Creates custom packets for injection. Legal Disclaimer This guide is for educational purposes only. Hacking into networks without permission is illegal and punishable by law. Use this knowledge responsibly.\nReferences Official Aircrack-ng Website Kali Linux Documentation ",
-  "wordCount" : "362",
+  "articleBody": "\nIntroduction Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.\nInstallation On Kali Linux (Pre-installed) sudo apt update \u0026\u0026 sudo apt install aircrack-ng On Ubuntu/Debian sudo apt update \u0026\u0026 sudo apt install aircrack-ng On Arch Linux sudo pacman -S aircrack-ng On macOS (Using Homebrew) brew install aircrack-ng Enabling Monitor Mode Before performing any attacks, you need to put your wireless interface in monitor mode.\nIdentify Wireless Interface ip a OR\niwconfig Enable Monitor Mode sudo airmon-ng start wlan0 This will create a new interface, usually named wlan0mon.\nDisable Monitor Mode sudo airmon-ng stop wlan0mon Common Attacks with Aircrack-ng 1. Packet Capture (airodump-ng) sudo airodump-ng wlan0mon This command scans for nearby networks and displays information like BSSID, ESSID, and encryption type.\nCapture Handshake for WPA/WPA2 Cracking sudo airodump-ng -c --bssid -w capture wlan0mon Replace with the Wi-Fi channel and with the target AP’s BSSID.\n2. Deauthentication Attack (aireplay-ng) Deauth attacks disconnect clients from the AP, forcing them to reconnect and potentially capture handshakes.\nsudo aireplay-ng -0 10 -a -c wlan0mon -0 10: Sends 10 deauth packets -a : Target AP’s MAC address -c : Specific client (optional, if omitted, all clients will be targeted) 3. WPA/WPA2 Password Cracking (aircrack-ng) Once the handshake is captured, use a wordlist to crack it:\nsudo aircrack-ng -w -b capture.cap Replace with a password list file (e.g., rockyou.txt).\n4. WEP Cracking Collect IVs sudo airodump-ng --bssid -c -w wep_capture wlan0mon Crack WEP Key sudo aircrack-ng -b wep_capture.cap 5. Fake Authentication Attack For bypassing MAC filtering and associating with a WEP network:\nsudo aireplay-ng -1 0 -a -h wlan0mon Additional Aircrack-ng Tools airmon-ng - Puts Wi-Fi adapters into monitor mode. airodump-ng - Captures packets and displays networks. aireplay-ng - Injects packets for various attacks. aircrack-ng - Cracks WEP/WPA passwords. packetforge-ng - Creates custom packets for injection. Legal Disclaimer This guide is for educational purposes only. Hacking into networks without permission is illegal and punishable by law. Use this knowledge responsibly.\nReferences Official Aircrack-ng Website Kali Linux Documentation ",
+  "wordCount" : "361",
   "inLanguage": "en",
   "datePublished": "2025-02-17T00:00:00Z",
   "dateModified": "2025-02-17T00:00:00Z",
@@ -203,7 +203,7 @@ Before performing any attacks, you need to put your wireless interface in monito
 
 </div>
   </header> 
-  <div class="post-content"><p>!<img alt="Image Description" loading="lazy" src="%5Cstatic%5Cimages%5CPasted%20image%2020250217203427.png"></p>
+  <div class="post-content"><p><img alt="Image Description" loading="lazy" src="%5Cimages%5CPasted%20image%2020250217203427.png"></p>
 <h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.</p>
 <h2 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h2>
