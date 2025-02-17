@@ -6,7 +6,7 @@
     <description>Recent content on Karan&#39;s DevLog</description>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://krnxmid.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to My Blog Page 👾🎉</title>
@@ -18,18 +18,18 @@
 &lt;p&gt;Ever since I first tinkered with computers, I&amp;rsquo;ve been captivated by how technology works—from building systems from scratch to understanding the intricate details of digital security. My passion for cybersecurity has driven me to explore ethical hacking and system administration, and now I want to bring you along on that journey.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Why is the website broken</title>
+      <link>https://krnxmid.github.io/posts/why-is-the-website-broken/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://krnxmid.github.io/posts/why-is-the-website-broken/</guid>
+      <description>&lt;p&gt;Hello please tell me this is working.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>My Hugo experience 💀</title>
       <link>https://krnxmid.github.io/posts/my-hugo-experience-/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://krnxmid.github.io/posts/my-hugo-experience-/</guid>
       <description>&lt;p&gt;i just spent my whole sunday on getting this working and i am tired now because most of the tutorials i had followed were for macos or were just outdated. the biggest issue with deploying to github pages is that github pages looks for stylesheet links in a html file the different way and hugo was not doing that, so i had to look for a solutions for hours and now i finally have it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://krnxmid.github.io/posts/why-is-the-website-broken/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/why-is-the-website-broken/</guid>
-      <description>&lt;p&gt;yayayayyayayayy&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
