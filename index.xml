@@ -53,6 +53,52 @@
 &lt;p&gt;Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>GPT-4 API Key For Free</title>
+      <link>https://krnxmid.github.io/posts/gpt-4-api-key-for-free/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://krnxmid.github.io/posts/gpt-4-api-key-for-free/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;https://krnxmid.github.io/images/Pasted%20image%2020250217220956.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This guide explains how to obtain a free API key for OpenAI&amp;rsquo;s GPT-4 through GitHub Marketplace. This allows developers to access GPT-4 for free within the limitations set by GitHub.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;steps-to-get-the-api-key&#34;&gt;Steps to Get the API Key&lt;/h2&gt;
+&lt;h3 id=&#34;1-sign-in-to-github&#34;&gt;1. &lt;strong&gt;Sign in to GitHub&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Ensure you have a GitHub account. If you don’t have one, create an account at &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;2-access-github-marketplace&#34;&gt;2. &lt;strong&gt;Access GitHub Marketplace&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to the &lt;a href=&#34;https://github.com/marketplace&#34;&gt;GitHub Marketplace&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Search for &amp;ldquo;GPT-4 API&amp;rdquo; or &amp;ldquo;OpenAI API.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Click on the model you want&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-generate-a-api-key&#34;&gt;3. &lt;strong&gt;Generate a API Key&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Click on GPT-4&lt;/li&gt;
+&lt;li&gt;On the right side click on &lt;code&gt;Get API Key&lt;/code&gt; to get the api key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-generate-a-github-token&#34;&gt;4. &lt;strong&gt;Generate a github token&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;After clicking on the option, click on &lt;code&gt;Get Developer Key&lt;/code&gt; next to the github option.&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Generate New Token&lt;/code&gt; and then click on the &lt;code&gt;Generate New Token (Classic)&lt;/code&gt; option.&lt;/li&gt;
+&lt;li&gt;Just specify a Note for the token and then skip rest of the options&lt;/li&gt;
+&lt;li&gt;Finally Click on &lt;code&gt;Generate Token&lt;/code&gt; to generate it!&lt;/li&gt;
+&lt;li&gt;Your API key will be displayed and then just copy it!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;usage-of-api-key&#34;&gt;Usage of API Key&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Once you have the API key, you can use it in your projects or use the given example code with python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;limitations--considerations&#34;&gt;Limitations &amp;amp; Considerations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Usage Limits&lt;/strong&gt;: Free tiers may have request limits (e.g., X requests per minute) you can check the official github documentation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terms &amp;amp; Conditions&lt;/strong&gt;: Always check GitHub Marketplace terms to ensure compliance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By following these steps, you can access GPT-4 via GitHub Marketplace without any cost, within the provided limits. Always keep an eye on changes to the free tier offerings.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>IoT Project</title>
       <link>https://krnxmid.github.io/posts/iot-project/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
