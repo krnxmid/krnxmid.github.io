@@ -24,5 +24,12 @@
       <guid>https://krnxmid.github.io/posts/my-hugo-experience-/</guid>
       <description>&lt;p&gt;i just spent my whole sunday on getting this working and i am tired now because most of the tutorials i had followed were for macos or were just outdated. the biggest issue with deploying to github pages is that github pages looks for stylesheet links in a html file the different way and hugo was not doing that, so i had to look for a solutions for hours and now i finally have it.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://krnxmid.github.io/posts/why-is-the-website-broken/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://krnxmid.github.io/posts/why-is-the-website-broken/</guid>
+      <description>&lt;p&gt;yayayayyayayayy&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
