@@ -18,24 +18,39 @@
 &lt;p&gt;Ever since I first tinkered with computers, I&amp;rsquo;ve been captivated by how technology works—from building systems from scratch to understanding the intricate details of digital security. My passion for cybersecurity has driven me to explore ethical hacking and system administration, and now I want to bring you along on that journey.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Aircrack-NG Guide</title>
-      <link>https://krnxmid.github.io/posts/aircrack-ng-suite-setup-and-usage-guide/</link>
+      <title>Detailed Guide on Aircrack-ng Suite</title>
+      <link>https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/aircrack-ng-suite-setup-and-usage-guide/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;https://krnxmid.github.io/images/Pasted%20image%2020250217214712.png&#34;&gt;&lt;/p&gt;
+      <guid>https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;https://krnxmid.github.io/images/Pasted%20image%2020250217215645.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Aircrack-ng is a powerful suite of tools for auditing Wi-Fi network security. It includes tools for monitoring, attacking, testing, and cracking Wi-Fi networks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Aircrack-ng&lt;/strong&gt; is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installation&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#enabling-monitor-mode&#34;&gt;Enabling Monitor Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packet-capturing-with-airodump-ng&#34;&gt;Packet Capturing with Airodump-ng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deauthentication-attacks-with-aireplay-ng&#34;&gt;Deauthentication Attacks with Aireplay-ng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cracking-wpawpa2-handshakes-with-aircrack-ng&#34;&gt;Cracking WPA/WPA2 Handshakes with Aircrack-ng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cracking-wep-networks&#34;&gt;Cracking WEP Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-tools-and-techniques&#34;&gt;Additional Tools and Techniques&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#best-practices--troubleshooting&#34;&gt;Best Practices &amp;amp; Troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#additional-resources&#34;&gt;Additional Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operating System:&lt;/strong&gt; A Linux distribution (Kali Linux is highly recommended).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hardware:&lt;/strong&gt; A wireless adapter that supports monitor mode and packet injection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Knowledge:&lt;/strong&gt; Familiarity with Linux terminal commands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permissions:&lt;/strong&gt; Legal authorization to test the target network.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;on-kali-linux-pre-installed&#34;&gt;On Kali Linux (Pre-installed)&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install aircrack-ng
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-ubuntudebian&#34;&gt;On Ubuntu/Debian&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install aircrack-ng
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-arch-linux&#34;&gt;On Arch Linux&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S aircrack-ng
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-macos-using-homebrew&#34;&gt;On macOS (Using Homebrew)&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install aircrack-ng
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enabling-monitor-mode&#34;&gt;Enabling Monitor Mode&lt;/h2&gt;
-&lt;p&gt;Before performing any attacks, you need to put your wireless interface in monitor mode.&lt;/p&gt;</description>
+&lt;p&gt;Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:&lt;/p&gt;</description>
     </item>
     <item>
       <title>IoT Project</title>

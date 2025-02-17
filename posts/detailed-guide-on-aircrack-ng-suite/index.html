@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Detailed Guide on Aircrack-ng Suite | Karan&#39;s DevLog</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+Introduction
+Aircrack-ng is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.
+
+Table of Contents
+
+Prerequisites
+Installation
+Enabling Monitor Mode
+Packet Capturing with Airodump-ng
+Deauthentication Attacks with Aireplay-ng
+Cracking WPA/WPA2 Handshakes with Aircrack-ng
+Cracking WEP Networks
+Additional Tools and Techniques
+Best Practices &amp; Troubleshooting
+Additional Resources
+
+
+Prerequisites
+
+Operating System: A Linux distribution (Kali Linux is highly recommended).
+Hardware: A wireless adapter that supports monitor mode and packet injection.
+Knowledge: Familiarity with Linux terminal commands.
+Permissions: Legal authorization to test the target network.
+
+
+Installation
+On Kali Linux (Pre-installed)
+Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:">
+<meta name="author" content="">
+<link rel="canonical" href="https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://krnxmid.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://krnxmid.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://krnxmid.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://krnxmid.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://krnxmid.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/">
+  <meta property="og:site_name" content="Karan&#39;s DevLog">
+  <meta property="og:title" content="Detailed Guide on Aircrack-ng Suite">
+  <meta property="og:description" content="
+Introduction Aircrack-ng is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.
+Table of Contents Prerequisites Installation Enabling Monitor Mode Packet Capturing with Airodump-ng Deauthentication Attacks with Aireplay-ng Cracking WPA/WPA2 Handshakes with Aircrack-ng Cracking WEP Networks Additional Tools and Techniques Best Practices &amp; Troubleshooting Additional Resources Prerequisites Operating System: A Linux distribution (Kali Linux is highly recommended). Hardware: A wireless adapter that supports monitor mode and packet injection. Knowledge: Familiarity with Linux terminal commands. Permissions: Legal authorization to test the target network. Installation On Kali Linux (Pre-installed) Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-17T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Detailed Guide on Aircrack-ng Suite">
+<meta name="twitter:description" content="
+Introduction
+Aircrack-ng is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.
+
+Table of Contents
+
+Prerequisites
+Installation
+Enabling Monitor Mode
+Packet Capturing with Airodump-ng
+Deauthentication Attacks with Aireplay-ng
+Cracking WPA/WPA2 Handshakes with Aircrack-ng
+Cracking WEP Networks
+Additional Tools and Techniques
+Best Practices &amp; Troubleshooting
+Additional Resources
+
+
+Prerequisites
+
+Operating System: A Linux distribution (Kali Linux is highly recommended).
+Hardware: A wireless adapter that supports monitor mode and packet injection.
+Knowledge: Familiarity with Linux terminal commands.
+Permissions: Legal authorization to test the target network.
+
+
+Installation
+On Kali Linux (Pre-installed)
+Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://krnxmid.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Detailed Guide on Aircrack-ng Suite",
+      "item": "https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Detailed Guide on Aircrack-ng Suite",
+  "name": "Detailed Guide on Aircrack-ng Suite",
+  "description": "\nIntroduction Aircrack-ng is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.\nTable of Contents Prerequisites Installation Enabling Monitor Mode Packet Capturing with Airodump-ng Deauthentication Attacks with Aireplay-ng Cracking WPA/WPA2 Handshakes with Aircrack-ng Cracking WEP Networks Additional Tools and Techniques Best Practices \u0026amp; Troubleshooting Additional Resources Prerequisites Operating System: A Linux distribution (Kali Linux is highly recommended). Hardware: A wireless adapter that supports monitor mode and packet injection. Knowledge: Familiarity with Linux terminal commands. Permissions: Legal authorization to test the target network. Installation On Kali Linux (Pre-installed) Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "\nIntroduction Aircrack-ng is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.\nTable of Contents Prerequisites Installation Enabling Monitor Mode Packet Capturing with Airodump-ng Deauthentication Attacks with Aireplay-ng Cracking WPA/WPA2 Handshakes with Aircrack-ng Cracking WEP Networks Additional Tools and Techniques Best Practices \u0026 Troubleshooting Additional Resources Prerequisites Operating System: A Linux distribution (Kali Linux is highly recommended). Hardware: A wireless adapter that supports monitor mode and packet injection. Knowledge: Familiarity with Linux terminal commands. Permissions: Legal authorization to test the target network. Installation On Kali Linux (Pre-installed) Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:\nsudo apt update sudo apt install aircrack-ng On Debian/Ubuntu sudo apt update sudo apt install aircrack-ng Enabling Monitor Mode Monitor mode allows the wireless card to capture all the traffic on a given channel, not just the traffic addressed to it. Here’s how you enable monitor mode using airmon-ng.\nIdentify your wireless interface: iwconfig Your wireless interface will likely be named wlan0 or wlan1.\nEnable monitor mode: sudo ip link set wlan0 down sudo iw dev wlan0 set type monitor sudo ip link set wlan0 up If using airmon-ng:\nsudo airmon-ng start wlan0 Verify monitor mode: iwconfig You should see your interface listed as monitor.\nPacket Capturing with Airodump-ng Airodump-ng is used for capturing packets on a network. Here’s how to use it to capture the packets needed for further analysis.\nStart packet capture: sudo airodump-ng wlan0mon Replace wlan0mon with your interface in monitor mode. This will display a list of available networks.\nTarget a specific network: sudo airodump-ng --bssid [BSSID] -c [Channel] -w [File Name] wlan0mon Replace [BSSID] with the target network’s MAC address, [Channel] with the network’s channel, and [File Name] with the name of the file to store the capture.\nDeauthentication Attacks with Aireplay-ng Aireplay-ng can be used for various attacks, including deauthentication attacks to capture handshakes.\nPerform a deauthentication attack: sudo aireplay-ng --deauth 10 -a [BSSID] wlan0mon This sends 10 deauthentication packets to disconnect clients from the network, which can help capture the WPA/WPA2 handshake.\nCracking WPA/WPA2 Handshakes with Aircrack-ng After capturing the WPA/WPA2 handshake, you can use aircrack-ng to attempt to crack the key.\nCrack the handshake: aircrack-ng -w [Wordlist] -b [BSSID] [Capture File].cap Replace [Wordlist] with the path to your dictionary file, [BSSID] with the target network’s MAC address, and [Capture File].cap with the file that contains the captured handshake.\nUsing a wordlist for the attack: You can use popular wordlists like rockyou.txt or create your own for the attack. Cracking WEP Networks WEP is an older and less secure protocol compared to WPA/WPA2, but it is still sometimes encountered in older networks.\nCapture packets: sudo airodump-ng -c [Channel] --bssid [BSSID] -w [File Name] wlan0mon Crack WEP key: aircrack-ng [Capture File].cap aircrack-ng will attempt to crack the WEP key using the packets collected in the .cap file.\nAdditional Tools and Techniques Airbase-ng Airbase-ng is a tool that can be used to create a fake access point. This is useful for social engineering attacks like evil twin attacks.\nAircrack-ng (For Other Protocols) You can also use aircrack-ng to crack WPS, and perform various other wireless network security assessments.\nBest Practices \u0026 Troubleshooting Use a powerful wordlist for cracking WPA/WPA2 handshakes (e.g., rockyou.txt). Monitor your signal strength and use a high-quality wireless card that supports packet injection. Avoid frequent packet sniffing on networks as it can be detected by security systems. Ensure you’re legally authorized to perform penetration tests on the network you’re auditing. Additional Resources Official Aircrack-ng Website Kali Linux Documentation Wi-Fi Hacking Guides ",
+  "wordCount" : "622",
+  "inLanguage": "en",
+  "datePublished": "2025-02-17T00:00:00Z",
+  "dateModified": "2025-02-17T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://krnxmid.github.io/posts/detailed-guide-on-aircrack-ng-suite/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Karan's DevLog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://krnxmid.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://krnxmid.github.io/" accesskey="h" title="Karan&#39;s DevLog (Alt + H)">Karan&#39;s DevLog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Detailed Guide on Aircrack-ng Suite
+    </h1>
+    <div class="post-meta"><span title='2025-02-17 00:00:00 +0000 UTC'>February 17, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img alt="Image" loading="lazy" src="/images/Pasted%20image%2020250217215645.png"></p>
+<h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p><strong>Aircrack-ng</strong> is a powerful suite of tools designed for auditing wireless networks. It’s widely used for testing the security of Wi-Fi networks by recovering WEP and WPA/WPA2 keys from captured packets. This guide covers everything from installation to executing attacks for educational and authorized penetration testing purposes.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents<a hidden class="anchor" aria-hidden="true" href="#table-of-contents">#</a></h2>
+<ol>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#enabling-monitor-mode">Enabling Monitor Mode</a></li>
+<li><a href="#packet-capturing-with-airodump-ng">Packet Capturing with Airodump-ng</a></li>
+<li><a href="#deauthentication-attacks-with-aireplay-ng">Deauthentication Attacks with Aireplay-ng</a></li>
+<li><a href="#cracking-wpawpa2-handshakes-with-aircrack-ng">Cracking WPA/WPA2 Handshakes with Aircrack-ng</a></li>
+<li><a href="#cracking-wep-networks">Cracking WEP Networks</a></li>
+<li><a href="#additional-tools-and-techniques">Additional Tools and Techniques</a></li>
+<li><a href="#best-practices--troubleshooting">Best Practices &amp; Troubleshooting</a></li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ol>
+<hr>
+<h2 id="prerequisites">Prerequisites<a hidden class="anchor" aria-hidden="true" href="#prerequisites">#</a></h2>
+<ul>
+<li><strong>Operating System:</strong> A Linux distribution (Kali Linux is highly recommended).</li>
+<li><strong>Hardware:</strong> A wireless adapter that supports monitor mode and packet injection.</li>
+<li><strong>Knowledge:</strong> Familiarity with Linux terminal commands.</li>
+<li><strong>Permissions:</strong> Legal authorization to test the target network.</li>
+</ul>
+<hr>
+<h2 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h2>
+<h3 id="on-kali-linux-pre-installed">On Kali Linux (Pre-installed)<a hidden class="anchor" aria-hidden="true" href="#on-kali-linux-pre-installed">#</a></h3>
+<p>Kali Linux comes with Aircrack-ng pre-installed. To update or reinstall:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install aircrack-ng
+</span></span></code></pre></div><h3 id="on-debianubuntu">On Debian/Ubuntu<a hidden class="anchor" aria-hidden="true" href="#on-debianubuntu">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install aircrack-ng
+</span></span></code></pre></div><hr>
+<h2 id="enabling-monitor-mode">Enabling Monitor Mode<a hidden class="anchor" aria-hidden="true" href="#enabling-monitor-mode">#</a></h2>
+<p>Monitor mode allows the wireless card to capture all the traffic on a given channel, not just the traffic addressed to it. Here’s how you enable monitor mode using <code>airmon-ng</code>.</p>
+<ol>
+<li><strong>Identify your wireless interface:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwconfig
+</span></span></code></pre></div><p>Your wireless interface will likely be named <code>wlan0</code> or <code>wlan1</code>.</p>
+<ol start="2">
+<li><strong>Enable monitor mode:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ip link set wlan0 down
+</span></span><span style="display:flex;"><span>sudo iw dev wlan0 set type monitor
+</span></span><span style="display:flex;"><span>sudo ip link set wlan0 up
+</span></span></code></pre></div><p>If using <code>airmon-ng</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo airmon-ng start wlan0
+</span></span></code></pre></div><ol start="3">
+<li><strong>Verify monitor mode:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwconfig
+</span></span></code></pre></div><p>You should see your interface listed as <code>monitor</code>.</p>
+<hr>
+<h2 id="packet-capturing-with-airodump-ng">Packet Capturing with Airodump-ng<a hidden class="anchor" aria-hidden="true" href="#packet-capturing-with-airodump-ng">#</a></h2>
+<p><code>Airodump-ng</code> is used for capturing packets on a network. Here’s how to use it to capture the packets needed for further analysis.</p>
+<ol>
+<li><strong>Start packet capture:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo airodump-ng wlan0mon
+</span></span></code></pre></div><p>Replace <code>wlan0mon</code> with your interface in monitor mode. This will display a list of available networks.</p>
+<ol start="2">
+<li><strong>Target a specific network:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo airodump-ng --bssid <span style="color:#f92672">[</span>BSSID<span style="color:#f92672">]</span> -c <span style="color:#f92672">[</span>Channel<span style="color:#f92672">]</span> -w <span style="color:#f92672">[</span>File Name<span style="color:#f92672">]</span> wlan0mon
+</span></span></code></pre></div><p>Replace <code>[BSSID]</code> with the target network&rsquo;s MAC address, <code>[Channel]</code> with the network’s channel, and <code>[File Name]</code> with the name of the file to store the capture.</p>
+<hr>
+<h2 id="deauthentication-attacks-with-aireplay-ng">Deauthentication Attacks with Aireplay-ng<a hidden class="anchor" aria-hidden="true" href="#deauthentication-attacks-with-aireplay-ng">#</a></h2>
+<p>Aireplay-ng can be used for various attacks, including deauthentication attacks to capture handshakes.</p>
+<ol>
+<li><strong>Perform a deauthentication attack:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo aireplay-ng --deauth <span style="color:#ae81ff">10</span> -a <span style="color:#f92672">[</span>BSSID<span style="color:#f92672">]</span> wlan0mon
+</span></span></code></pre></div><p>This sends 10 deauthentication packets to disconnect clients from the network, which can help capture the WPA/WPA2 handshake.</p>
+<hr>
+<h2 id="cracking-wpawpa2-handshakes-with-aircrack-ng">Cracking WPA/WPA2 Handshakes with Aircrack-ng<a hidden class="anchor" aria-hidden="true" href="#cracking-wpawpa2-handshakes-with-aircrack-ng">#</a></h2>
+<p>After capturing the WPA/WPA2 handshake, you can use <code>aircrack-ng</code> to attempt to crack the key.</p>
+<ol>
+<li><strong>Crack the handshake:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aircrack-ng -w <span style="color:#f92672">[</span>Wordlist<span style="color:#f92672">]</span> -b <span style="color:#f92672">[</span>BSSID<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>Capture File<span style="color:#f92672">]</span>.cap
+</span></span></code></pre></div><p>Replace <code>[Wordlist]</code> with the path to your dictionary file, <code>[BSSID]</code> with the target network’s MAC address, and <code>[Capture File].cap</code> with the file that contains the captured handshake.</p>
+<ol start="2">
+<li><strong>Using a wordlist for the attack:</strong>
+You can use popular wordlists like <code>rockyou.txt</code> or create your own for the attack.</li>
+</ol>
+<hr>
+<h2 id="cracking-wep-networks">Cracking WEP Networks<a hidden class="anchor" aria-hidden="true" href="#cracking-wep-networks">#</a></h2>
+<p>WEP is an older and less secure protocol compared to WPA/WPA2, but it is still sometimes encountered in older networks.</p>
+<ol>
+<li><strong>Capture packets:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo airodump-ng -c <span style="color:#f92672">[</span>Channel<span style="color:#f92672">]</span> --bssid <span style="color:#f92672">[</span>BSSID<span style="color:#f92672">]</span> -w <span style="color:#f92672">[</span>File Name<span style="color:#f92672">]</span> wlan0mon
+</span></span></code></pre></div><ol start="2">
+<li><strong>Crack WEP key:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aircrack-ng <span style="color:#f92672">[</span>Capture File<span style="color:#f92672">]</span>.cap
+</span></span></code></pre></div><p><code>aircrack-ng</code> will attempt to crack the WEP key using the packets collected in the <code>.cap</code> file.</p>
+<hr>
+<h2 id="additional-tools-and-techniques">Additional Tools and Techniques<a hidden class="anchor" aria-hidden="true" href="#additional-tools-and-techniques">#</a></h2>
+<h3 id="airbase-ng">Airbase-ng<a hidden class="anchor" aria-hidden="true" href="#airbase-ng">#</a></h3>
+<p><code>Airbase-ng</code> is a tool that can be used to create a fake access point. This is useful for social engineering attacks like evil twin attacks.</p>
+<h3 id="aircrack-ng-for-other-protocols">Aircrack-ng (For Other Protocols)<a hidden class="anchor" aria-hidden="true" href="#aircrack-ng-for-other-protocols">#</a></h3>
+<p>You can also use <code>aircrack-ng</code> to crack WPS, and perform various other wireless network security assessments.</p>
+<hr>
+<h2 id="best-practices--troubleshooting">Best Practices &amp; Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#best-practices--troubleshooting">#</a></h2>
+<ul>
+<li><strong>Use a powerful wordlist</strong> for cracking WPA/WPA2 handshakes (e.g., <code>rockyou.txt</code>).</li>
+<li><strong>Monitor your signal strength</strong> and use a high-quality wireless card that supports packet injection.</li>
+<li><strong>Avoid frequent packet sniffing</strong> on networks as it can be detected by security systems.</li>
+<li><strong>Ensure you&rsquo;re legally authorized</strong> to perform penetration tests on the network you&rsquo;re auditing.</li>
+</ul>
+<hr>
+<h2 id="additional-resources">Additional Resources<a hidden class="anchor" aria-hidden="true" href="#additional-resources">#</a></h2>
+<ul>
+<li><a href="https://www.aircrack-ng.org/">Official Aircrack-ng Website</a></li>
+<li><a href="https://www.kali.org/docs/">Kali Linux Documentation</a></li>
+<li><a href="https://null-byte.wonderhowto.com/">Wi-Fi Hacking Guides</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://krnxmid.github.io/">Karan&#39;s DevLog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
