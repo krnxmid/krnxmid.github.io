@@ -155,12 +155,5 @@
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This project successfully demonstrated the integration of a PLC with ThingsBoard for industrial IoT applications. The system provides real-time monitoring, automation, and remote accessibility, making it a robust solution for industrial automation needs.&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>My Hugo experience 💀</title>
-      <link>https://krnxmid.github.io/posts/my-hugo-experience-/</link>
-      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://krnxmid.github.io/posts/my-hugo-experience-/</guid>
-      <description>&lt;p&gt;i just spent my whole sunday on getting this working and i am tired now because most of the tutorials i had followed were for macos or were just outdated. the biggest issue with deploying to github pages is that github pages looks for stylesheet links in a html file the different way and hugo was not doing that, so i had to look for a solutions for hours and now i finally have it.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
